@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 type LogoProps = {
-	logoNameProp?: string;
+	logoNameProp: string;
+	variant: string;
+};
+
+type LogoStyledProps = {
 	variant: string;
 };
 
@@ -52,7 +56,7 @@ export const LogoMiniContainer = styled.span`
 	color: #ffffff;
 `;
 
-export const LogoLetters = styled.a<LogoProps>`
+export const LogoLetters = styled.a<LogoStyledProps>`
 	font-size: ${(props) =>
 		LogoVariants.LogoLetters[props.variant as keyof LogoVariantsType].fontSize};
 	font-weight: 900;
