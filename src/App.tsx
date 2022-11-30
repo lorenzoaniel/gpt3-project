@@ -6,7 +6,7 @@ import Navbar from "./Sections/Navbar/Navbar";
 import { GlobalStyle } from "./Styles/GlobalStyle/GlobalStyle";
 
 const AppContainer = styled.div`
-	background-color: yellow;
+	background-color: grey;
 	height: inherit;
 	width: inherit;
 
