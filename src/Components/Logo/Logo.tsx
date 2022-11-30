@@ -43,8 +43,8 @@ const LogoVariants: LogoVariantsType = {
 
 export const LogoContainer = styled.div`
 	background-color: green;
-	height: 58px;
-	width: 65px;
+	height: 100%;
+	width: 100%;
 
 	display: flex;
 	justify-content: center;
