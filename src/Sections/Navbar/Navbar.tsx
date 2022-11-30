@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../../Components/Logo/Logo";
 import Links from "../../Components/Links/Links";
+import Button from "../../Components/Button/Button";
 
 const NavbarContainer = styled.div`
 	background-color: red;
@@ -11,13 +12,29 @@ const NavbarContainer = styled.div`
 	display: flex;
 `;
 
-const NavbarLogoMiniContainer = styled.div``;
-
-const NavbarLinksMiniContainer = styled.div`
-	display: flex;
+const NavbarLogoMiniContainer = styled.div`
+	height: 100%;
+	width: 10%;
 `;
 
-const NavbarButtonMiniContainer = styled.div``;
+const NavbarLinksMiniContainer = styled.div`
+	background-color: purple;
+	height: 100%;
+	width: 50%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+`;
+
+const NavbarButtonMiniContainer = styled.div`
+	background-color: orange;
+	height: 100%;
+	width: 40%;
+
+	display: flex;
+	justify-content: flex-end;
+`;
 
 function Navbar() {
 	return (
@@ -32,7 +49,10 @@ function Navbar() {
 				<Links linkNameProp={"Case Studies"} variant={"navStyle"} />
 				<Links linkNameProp={"Library"} variant={"navStyle"} />
 			</NavbarLinksMiniContainer>
-			<NavbarButtonMiniContainer></NavbarButtonMiniContainer>
+			<NavbarButtonMiniContainer>
+				<Button buttonNameProp={"Sign in"} variant={"navStyle"} />
+				<Button buttonNameProp={"Sign up"} variant={"navStyle"} />
+			</NavbarButtonMiniContainer>
 		</NavbarContainer>
 	);
 }
