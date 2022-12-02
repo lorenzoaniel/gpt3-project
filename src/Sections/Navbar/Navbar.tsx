@@ -4,38 +4,6 @@ import Logo from "../../Components/Logo/Logo";
 import Links from "../../Components/Links/Links";
 import Button from "../../Components/Button/Button";
 
-const NavbarContainer = styled.div`
-	background-color: red;
-	height: 58px;
-	width: 100%;
-
-	display: flex;
-`;
-
-const NavbarLogoMiniContainer = styled.div`
-	height: 100%;
-	width: 10%;
-`;
-
-const NavbarLinksMiniContainer = styled.div`
-	background-color: purple;
-	height: 100%;
-	width: 50%;
-
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-`;
-
-const NavbarButtonMiniContainer = styled.div`
-	background-color: orange;
-	height: 100%;
-	width: 40%;
-
-	display: flex;
-	justify-content: flex-end;
-`;
-
 function Navbar() {
 	return (
 		<NavbarContainer>
@@ -50,11 +18,41 @@ function Navbar() {
 				<Links linkNameProp={"Library"} variant={"navStyle"} />
 			</NavbarLinksMiniContainer>
 			<NavbarButtonMiniContainer>
-				<Button buttonNameProp={"Sign in"} variant={"navStyle"} />
+				<Button buttonNameProp={"Sign in"} variant={"navStyleTransparent"} />
 				<Button buttonNameProp={"Sign up"} variant={"navStyle"} />
 			</NavbarButtonMiniContainer>
 		</NavbarContainer>
 	);
 }
+
+const NavbarContainer = styled.nav`
+	height: 58px;
+	width: 100%;
+
+	display: flex;
+	margin-top: 55px;
+`;
+
+const NavbarLogoMiniContainer = styled.div`
+	height: 100%;
+	width: 10%;
+`;
+
+const NavbarLinksMiniContainer = styled.div`
+	height: 100%;
+	width: 50%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+`;
+
+const NavbarButtonMiniContainer = styled.div`
+	height: 100%;
+	width: 40%;
+
+	display: flex;
+	justify-content: flex-end;
+`;
 
 export default Navbar;
