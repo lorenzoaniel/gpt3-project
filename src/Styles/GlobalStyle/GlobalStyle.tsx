@@ -2,8 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    /*FONTS*/
+    /*COLORS*/
+    --main-background-color: #040C18;
 
+    /*FONTS*/
     --default-font: 'Manrope', sans-serif; 
 
     /*STYLES*/
