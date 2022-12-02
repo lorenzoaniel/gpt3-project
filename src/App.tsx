@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import Navbar from "./Sections/Navbar/Navbar";
+import Header from "./Sections/Header/Header";
 
 import { GlobalStyle } from "./Styles/GlobalStyle/GlobalStyle";
 
-const AppContainer = styled.div`
-	background-color: grey;
+const AppContainer = styled.main`
+	background-color: var(--main-background-color);
 	height: inherit;
 	width: inherit;
 
@@ -21,6 +22,7 @@ function App() {
 			<GlobalStyle />
 			<AppContainer>
 				<Navbar />
+				<Header />
 			</AppContainer>
 		</>
 	);
