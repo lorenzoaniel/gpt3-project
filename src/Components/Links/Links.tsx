@@ -32,6 +32,7 @@ const LinksContainer = styled.a<LinksStyledProps>`
 	font-size: ${(props) =>
 		LinksVariants.LinksContainer[props.variant as keyof LinksVariantsType].fontSize};
 	color: #ffffff;
+	text-align: center;
 `;
 
 export default Links;
