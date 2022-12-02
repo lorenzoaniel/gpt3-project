@@ -33,7 +33,7 @@ const LogoVariants: LogoVariantsType = {
 	LogoMiniContainer: {},
 	LogoLetters: {
 		navStyle: {
-			fontSize: "18px",
+			fontSize: "22px",
 		},
 		footerStyle: {
 			fontSize: "24px",
@@ -42,7 +42,7 @@ const LogoVariants: LogoVariantsType = {
 };
 
 export const LogoContainer = styled.div`
-	background-color: green;
+	/* background-color: green; */
 	height: 100%;
 	width: 100%;
 
@@ -52,7 +52,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const LogoMiniContainer = styled.span`
-	background-color: orange;
+	/* background-color: orange; */
 	color: #ffffff;
 `;
 
