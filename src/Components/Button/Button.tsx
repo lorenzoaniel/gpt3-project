@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 type ButtonProps = {
 	buttonNameProp: string;
-	variant: string;
+	variant?: string;
 };
 
 type ButtonStyledProps = {
@@ -15,44 +15,41 @@ interface ButtonVariantsType {
 }
 
 const Button = (props: ButtonProps) => {
-	const { buttonNameProp, variant } = props;
+	const { buttonNameProp, variant = "default" } = props;
 
 	return <ButtonContainer variant={variant}>{buttonNameProp}</ButtonContainer>;
 };
 
 const ButtonVariants: ButtonVariantsType = {
+	/* variants of the component can be applied on the 'variant' prop as a string. ex variant={"navStyle"} */
 	ButtonContainer: {
-		navStyle: {
-			height: "58px",
-			width: "152px",
-			borderRadius: "5px",
-			backgroundColor: "#FF4820",
-			fontSize: "18px",
-		},
-		navStyleTransparent: {
-			height: "58px",
-			width: "152px",
-			borderRadius: "5px",
-			backgroundColor: "transparent",
-			fontSize: "18px",
-		},
+		default: `` /* default to rely on base style stated on style component */,
+		navStyle: `
+			background-color: #FF4820;
+		`,
+		navStyleTransparent: `
+			background-color: transparent;
+		`,
+		headerStyle: `
+			width: 30%;
+			height: 100%;
+			border-radius: 0px 5px 5px 0px;
+      background-color: #FF4820;
+		`,
 	},
 };
 
 const ButtonContainer = styled.button<ButtonStyledProps>`
-	border: none;
-	color: #ffffff;
+	height: 58px;
+	width: 152px;
 
-	background-color: ${(props) =>
-		ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType].backgroundColor};
-	height: ${(props) =>
-		ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType].height};
-	width: ${(props) =>
-		ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType].width};
-	font-size: ${(props) =>
-		ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType].fontSize};
-	border-radius: ${(props) =>
-		ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType].borderRadius};
+	border: none;
+	border-radius: 5px;
+
+	color: #ffffff;
+	font-size: 18px;
+
+	${(props) => ButtonVariants.ButtonContainer[props.variant as keyof ButtonVariantsType]};
 `;
 
 export default Button;
