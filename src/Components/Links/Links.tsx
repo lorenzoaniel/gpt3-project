@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 type LinksProps = {
 	linkNameProp?: string;
-	variant: string;
+	variant?: string;
 };
 
 type LinksStyledProps = {
@@ -15,24 +15,26 @@ interface LinksVariantsType {
 }
 
 const Links = (props: LinksProps) => {
-	const { linkNameProp, variant } = props;
+	const { linkNameProp, variant = "default" } = props;
 
 	return <LinksContainer variant={variant}>{linkNameProp}</LinksContainer>;
 };
 
 const LinksVariants: LinksVariantsType = {
+	/* variants of the component can be applied on the 'variant' prop as a string. ex variant={"navStyle"} */
 	LinksContainer: {
-		navStyle: {
-			fontSize: "18px",
-		},
+		default: `` /* default to rely on base style stated on style component */,
+		navStyle: `
+			font-size: 18px,
+		`,
 	},
 };
 
 const LinksContainer = styled.a<LinksStyledProps>`
-	font-size: ${(props) =>
-		LinksVariants.LinksContainer[props.variant as keyof LinksVariantsType].fontSize};
 	color: #ffffff;
 	text-align: center;
+
+	${(props) => LinksVariants.LinksContainer[props.variant as keyof LinksVariantsType]};
 `;
 
 export default Links;
