@@ -33,14 +33,14 @@ const InputBarVariants: InputBarVariantsType = {
 	/* variants of the component can be applied on the 'variant' prop as a string. ex variant={"navStyle"} */
 	InputBarContainer: {
 		default: `` /* default to rely on base style stated on style component */,
-		headerStyle: `
+		emailRegistrationStyle: `
       height: 73px;
 			width: 100%;
 		`,
 	},
 	InputBarStyled: {
 		default: ``,
-		headerStyle: `
+		emailRegistrationStyle: `
 			width: 70%;
       background: #052D56;
 

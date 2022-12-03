@@ -30,7 +30,7 @@ const ButtonVariants: ButtonVariantsType = {
 		navStyleTransparent: `
 			background-color: transparent;
 		`,
-		headerStyle: `
+		emailRegistrationStyle: `
 			width: 30%;
 			height: 100%;
 			border-radius: 0px 5px 5px 0px;
