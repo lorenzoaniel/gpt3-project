@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 type LogoProps = {
 	logoNameProp: string;
-	variant: string;
+	variant?: string;
 };
 
 type LogoStyledProps = {
@@ -17,7 +17,7 @@ interface LogoVariantsType {
 }
 
 const Logo = (props: LogoProps) => {
-	const { variant, logoNameProp } = props;
+	const { logoNameProp, variant = "default" } = props;
 
 	return (
 		<LogoContainer>
@@ -29,15 +29,17 @@ const Logo = (props: LogoProps) => {
 };
 
 const LogoVariants: LogoVariantsType = {
+	/* variants of the component can be applied on the 'variant' prop as a string. ex variant={"navStyle"} */
 	LogoContainer: {},
 	LogoMiniContainer: {},
 	LogoLetters: {
-		navStyle: {
-			fontSize: "22px",
-		},
-		footerStyle: {
-			fontSize: "24px",
-		},
+		default: `` /* default to rely on base style stated on style component */,
+		navStyle: `
+			font-size: 22px,
+		`,
+		footerStyle: `
+			font-size: 24px,
+		`,
 	},
 };
 
@@ -57,9 +59,9 @@ export const LogoMiniContainer = styled.span`
 `;
 
 export const LogoLetters = styled.a<LogoStyledProps>`
-	font-size: ${(props) =>
-		LogoVariants.LogoLetters[props.variant as keyof LogoVariantsType].fontSize};
 	font-weight: 900;
+
+	${(props) => LogoVariants.LogoLetters[props.variant as keyof LogoVariantsType]}
 `;
 
 export default Logo;
