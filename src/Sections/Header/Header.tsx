@@ -7,6 +7,7 @@ import Heading from "../../Components/Heading/Heading";
 import HeaderImg from "../../Assets/Img/Header/HeaderImg.png";
 import Paragraph from "../../Components/Paragraph/Paragraph";
 import InputBar from "../../Components/InputBar/InputBar";
+import AvatarsStaggered from "../../Components/AvatarsStaggered/AvatarsStaggered";
 
 const Header = () => {
 	return (
@@ -26,6 +27,11 @@ const Header = () => {
 					InputBarPlaceholderProp={"Your Email Address"}
 					InputBarButtonTitleProp={"Get Started"}
 					variant={"emailRegistrationStyle"}
+				/>
+				<AvatarsStaggered
+					exactNumbUsers={1600}
+					avatarDescProp={" people registered in the last "}
+					lastTimeRange={"24 hours"}
 				/>
 			</HeaderLeftHalfMiniContainer>
 			<HeaderRightHalfMiniContainer>
