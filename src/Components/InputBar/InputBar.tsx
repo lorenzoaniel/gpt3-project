@@ -64,6 +64,7 @@ const InputBarContainer = styled.div<InputBarStyledProps>`
 const InputBarStyled = styled.input<InputBarStyledProps>`
 	height: 100%;
 	border: none;
+	outline: none;
 
 	${(props) => InputBarVariants.InputBarStyled[props.variant as keyof InputBarVariantsType]};
 `;
