@@ -5,6 +5,8 @@ import Navbar from "./Sections/Navbar/Navbar";
 import Header from "./Sections/Header/Header";
 
 import { GlobalStyle } from "./Styles/GlobalStyle/GlobalStyle";
+import CompanyBrands from "./Sections/CompanyBrands/CompanyBrands";
+import FeatureOne from "./Sections/FeatureOne/FeatureOne";
 
 const AppContainer = styled.main`
 	background-color: var(--main-background-color);
@@ -23,6 +25,8 @@ function App() {
 			<AppContainer>
 				<Navbar />
 				<Header />
+				<CompanyBrands />
+				<FeatureOne />
 			</AppContainer>
 		</>
 	);
