@@ -29,6 +29,9 @@ const HeadingVariantsMixins: HeadingVariantsType = {
       background-clip: text;
       text-fill-color: transparent;
     `,
+		whiteTextFill: `
+			color: #FFFFFF;
+		`,
 	},
 };
 
@@ -40,10 +43,32 @@ const HeadingVariants: HeadingVariantsType = {
       ${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
 
       font-weight: 800;
-      font-size: 62px;
+      font-size: clamp(31px, 4vw, 68px);
       line-height: 75px;
       letter-spacing: -0.04em;
     `,
+		featureOneWhite: `
+			${HeadingVariantsMixins.HeadingContainer.whiteTextFill}
+
+			grid-area: heading;
+
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 75px;
+			letter-spacing: -0.04em;
+		`,
+
+		featureOneRainbow: `
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
+
+			width: 50%;
+
+			font-weight: 800;
+			font-size: 34px;
+			line-height: 45px;
+
+			padding-top: 2%;
+		`,
 	},
 };
 
