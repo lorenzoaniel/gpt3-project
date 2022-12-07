@@ -31,6 +31,11 @@ const ParagraphMixinVariants: ParagraphVariantsType = {
 		lightBlueText: `
       color: #81AFDD;
     `,
+		featureOne: `
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 2.5vw;
+		`,
 	},
 };
 
@@ -38,8 +43,19 @@ const ParagraphVariants: ParagraphVariantsType = {
 	ParagraphContainer: {
 		default: ``,
 		headerStyle: `
-      width: 75%
+      width: 75%;
     `,
+		featureOne: `
+			width: 90%;
+			height: fit-content;
+
+			grid-area: paragraph;
+			margin-top: 2%;
+		`,
+		featureOneCenter: `
+			width: fit-content;
+			margin-top: 4%;
+		`,
 	},
 	ParagraphContent: {
 		default: ``,
@@ -49,6 +65,14 @@ const ParagraphVariants: ParagraphVariantsType = {
       font-size: 20px;
       line-height: 27px;
     `,
+		featureOne: `
+			${ParagraphMixinVariants.ParagraphContent.featureOne}
+			color: #81AFDD;
+		`,
+		featureOneCenter: `
+			${ParagraphMixinVariants.ParagraphContent.featureOne}
+			color: #FF8A71;
+		`,
 	},
 };
 
