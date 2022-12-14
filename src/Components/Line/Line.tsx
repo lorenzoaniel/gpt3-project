@@ -19,12 +19,24 @@ const Line = (props: LineProps) => {
 	return <MainContainer variant={variant} />;
 };
 
+const LineVariantsMixins: LineVariantsType = {
+	MainContainer: {
+		defGridArea: `
+      grid-area: line;
+    `,
+	},
+};
+
 const LineVariants: LineVariantsType = {
 	/* variants of the component can be applied on the 'variant' prop as a string. ex variant={"navStyle"} */
 	MainContainer: {
 		default: "" /* default to rely on base style stated on style component */,
 		featureOne: `
-      grid-area: line;
+      ${LineVariantsMixins.MainContainer.defGridArea}
+      align-self: flex-end;
+    `,
+		featureTwo: `
+      ${LineVariantsMixins.MainContainer.defGridArea}
       align-self: flex-end;
     `,
 	},
