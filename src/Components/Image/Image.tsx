@@ -45,6 +45,11 @@ const ImageVariants: ImageVariantsType = {
 		companyBrandStyle: `
 			height: 100%;
 		`,
+		articleDef: `
+			object-fit: cover;
+			width: 100%;
+      height: 100%;
+		`,
 	},
 };
 
