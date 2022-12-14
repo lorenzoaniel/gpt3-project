@@ -25,7 +25,10 @@ const LinksVariants: LinksVariantsType = {
 	LinksContainer: {
 		default: `` /* default to rely on base style stated on style component */,
 		navStyle: `
-			font-size: 18px,
+			font-size: 18px;
+		`,
+		footerLinks: `
+			font-size: 18px;
 		`,
 	},
 };
