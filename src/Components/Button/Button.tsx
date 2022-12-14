@@ -36,6 +36,25 @@ const ButtonVariants: ButtonVariantsType = {
 			border-radius: 0px 5px 5px 0px;
       background-color: #FF4820;
 		`,
+		CTA: `
+			width: 189.14px;
+			height: 59.4px;
+			background: #000000;
+			border-radius: 40px;
+			grid-area: button;
+			align-self: center;
+			justify-self: flex-end;
+		`,
+		footerRequest: `
+			width: 218px;
+			height: 65px;
+
+			background: transparent;
+			border: 1px solid white;
+			border-radius: 0;
+
+			margin-top: 64px;
+		`,
 	},
 };
 
