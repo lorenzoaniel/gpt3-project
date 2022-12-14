@@ -22,6 +22,9 @@ const Heading = (props: HeadingProps) => {
 
 const HeadingVariantsMixins: HeadingVariantsType = {
 	HeadingContainer: {
+		defGridArea: `
+			grid-area: heading;
+		`,
 		rainbowTextFill: `
       background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
       -webkit-background-clip: text;
@@ -29,6 +32,17 @@ const HeadingVariantsMixins: HeadingVariantsType = {
       background-clip: text;
       text-fill-color: transparent;
     `,
+		rainbowTextFont34: `
+			font-weight: 800;
+			font-size: 34px;
+			line-height: 45px;
+		`,
+		rainbowTextFont62: `
+			font-weight: 800;
+			font-size: 62px;
+			line-height: 75px;
+			letter-spacing: -0.04em;
+		`,
 		whiteTextFill: `
 			color: #FFFFFF;
 		`,
@@ -41,16 +55,14 @@ const HeadingVariants: HeadingVariantsType = {
 		default: `` /* default to rely on base style stated on style component */,
 		headerStyle: `
       ${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
-
       font-weight: 800;
-      font-size: clamp(31px, 4vw, 68px);
+      font-size: clamp(31px, 4vw, 60px);
       line-height: 75px;
       letter-spacing: -0.04em;
     `,
 		featureOneWhite: `
 			${HeadingVariantsMixins.HeadingContainer.whiteTextFill}
-
-			grid-area: heading;
+			${HeadingVariantsMixins.HeadingContainer.defGridArea}
 
 			font-weight: 800;
 			font-size: 24px;
@@ -60,14 +72,64 @@ const HeadingVariants: HeadingVariantsType = {
 
 		featureOneRainbow: `
 			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
-
 			width: 50%;
-
-			font-weight: 800;
-			font-size: 34px;
-			line-height: 45px;
-
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFont34}
 			padding-top: 2%;
+		`,
+
+		featureTwoRainbow: `
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFont34}
+			display: inline-block;
+			width: 75%;
+		`,
+
+		featureTwoWhite: `
+			${HeadingVariantsMixins.HeadingContainer.whiteTextFill}
+			${HeadingVariantsMixins.HeadingContainer.defGridArea}
+			font-weight: 800;
+			font-size: clamp(12px, 1vw, 18px);
+			line-height: 24px;
+			letter-spacing: -0.04em;
+
+			width: 80%;
+		`,
+		featureThreeRainbow: `
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFont34}
+		`,
+		CTA: `
+			${HeadingVariantsMixins.HeadingContainer.defGridArea}
+			font-weight: 800;
+			font-size: 24px;
+			line-height: clamp(30px, 3vw ,45px);
+			color: #000000;
+		`,
+		Blog: `
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFont62}
+
+			display: inline-block;
+			width: 70%;
+			height: 100%;
+		`,
+		articlePrimary: `
+			${HeadingVariantsMixins.HeadingContainer.whiteTextFill}
+			font-weight: 800;
+			font-size: 25.11px;
+			line-height: 30px;
+		`,
+		articleSecondary: `
+			${HeadingVariantsMixins.HeadingContainer.whiteTextFill}
+			font-weight: 800;
+			font-size: 19.3154px;
+			line-height: 30px;
+		`,
+		footerMain: `
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFill}
+			${HeadingVariantsMixins.HeadingContainer.rainbowTextFont62}
+			text-align: center;
+			
 		`,
 	},
 };
