@@ -26,15 +26,34 @@ const Paragraph = (props: ParagraphProps) => {
 };
 
 const ParagraphMixinVariants: ParagraphVariantsType = {
-	ParagraphContainer: {},
+	ParagraphContainer: {
+		defGridArea: `
+			grid-area: paragraph;
+		`,
+	},
 	ParagraphContent: {
 		lightBlueText: `
       color: #81AFDD;
     `,
-		featureOne: `
+		orangeText: `
+      color: #FF8A71;
+    `,
+		orangeDescFont16: `
+			color: #FF8A71;
+
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 2.5vw;
+		`,
+		featureThreeFont16: `
+			font-size: 16px;
+			line-height: 30px;
+		`,
+		articleDateDefault: `
+			color: #FFFFFF;
+			font-weight: 700;
+			font-size: 11.649px;
+			line-height: 35px;
 		`,
 	},
 };
@@ -46,15 +65,41 @@ const ParagraphVariants: ParagraphVariantsType = {
       width: 75%;
     `,
 		featureOne: `
+			${ParagraphMixinVariants.ParagraphContainer.defGridArea}
 			width: 90%;
 			height: fit-content;
 
-			grid-area: paragraph;
 			margin-top: 2%;
 		`,
 		featureOneCenter: `
 			width: fit-content;
 			margin-top: 4%;
+		`,
+		featureTwoLightBlue: `
+			${ParagraphMixinVariants.ParagraphContainer.defGridArea}
+			width: 90%;
+			justify-self: flex-end;
+		`,
+		CTA: `
+			${ParagraphMixinVariants.ParagraphContainer.defGridArea}
+			width: fit-content;
+			align-self: flex-end;
+		`,
+		articlePrimary: `
+			margin-top: 8px;
+		`,
+		articleSecondary: `
+			margin-top: 7px;
+		`,
+		articleReadDefault: `
+			width: fit-content;
+			margin-top: auto; //cannot justify-self
+		`,
+		footerLogoDesc: `
+			height: fit-content;
+			width: 168px;
+			text-align: center;
+			margin-top: 25px;
 		`,
 	},
 	ParagraphContent: {
@@ -66,12 +111,57 @@ const ParagraphVariants: ParagraphVariantsType = {
       line-height: 27px;
     `,
 		featureOne: `
-			${ParagraphMixinVariants.ParagraphContent.featureOne}
+			${ParagraphMixinVariants.ParagraphContent.orangeDescFont16}
 			color: #81AFDD;
 		`,
 		featureOneCenter: `
-			${ParagraphMixinVariants.ParagraphContent.featureOne}
-			color: #FF8A71;
+			${ParagraphMixinVariants.ParagraphContent.orangeDescFont16}
+		`,
+		featureTwoOrange: `
+			${ParagraphMixinVariants.ParagraphContent.orangeDescFont16}
+			margin-top: 34px;
+		`,
+		featureTwoLightBlue: `
+			${ParagraphMixinVariants.ParagraphContent.lightBlueText}
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+		`,
+		featureThree: `
+			${ParagraphMixinVariants.ParagraphContent.featureThreeFont16}
+			${ParagraphMixinVariants.ParagraphContent.lightBlueText}
+			font-weight: 400;
+		`,
+		featureThreeLightBlue: `
+			${ParagraphMixinVariants.ParagraphContent.featureThreeFont16}	
+			color: #71E5FF;
+			font-weight: 500;
+		`,
+		featureThreeOrange: `
+			${ParagraphMixinVariants.ParagraphContent.featureThreeFont16}
+			${ParagraphMixinVariants.ParagraphContent.orangeText}
+			font-weight: 500;
+		`,
+		CTA: `
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 30px;
+			color: #0E0E0E;
+		`,
+		articlePrimary: `
+			${ParagraphMixinVariants.ParagraphContent.articleDateDefault}
+		`,
+		articleSecondary: `
+			${ParagraphMixinVariants.ParagraphContent.articleDateDefault}
+		`,
+		articleReadDefault: `
+			${ParagraphMixinVariants.ParagraphContent.articleDateDefault}
+		`,
+		footerLogoDesc: `
+			font-family: 'Gilroy-Medium';
+			color: #FFFFFF;
+			font-size: 12px;
+			line-height: 14px;
 		`,
 	},
 };
