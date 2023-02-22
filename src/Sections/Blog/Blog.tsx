@@ -12,22 +12,22 @@ import article5 from "../../Assets/Img/Blog/article5.png";
 
 const Blog = () => {
 	return (
-		<BL.mainContainer>
-			<BL.mainHeader>
+		<BL.MainContainer>
+			<BL.MainHeader>
 				<Heading
 					headingTitleProp={"A lot is happening, We are blogging about it."}
 					variant={"Blog"}
 				/>
-			</BL.mainHeader>
-			<BL.mainArticle>
+			</BL.MainHeader>
+			<BL.MainArticle>
 				<Article
 					titleProp={"GPT-3 and Open  AI is the future. Let us exlore how it is?"}
 					dateProp={"Sep 26, 2021"}
 					srcImgProp={article1}
 					variant={"articlePrimary"}
 				/>
-			</BL.mainArticle>
-			<BL.articleTilesContainer>
+			</BL.MainArticle>
+			<BL.ArticleTilesContainer>
 				<Article
 					titleProp={"GPT-3 and Open  AI is the future. Let us exlore how it is?"}
 					dateProp={"Sep 26, 2021"}
@@ -52,13 +52,13 @@ const Blog = () => {
 					srcImgProp={article5}
 					variant={"articleSecondary"}
 				/>
-			</BL.articleTilesContainer>
-		</BL.mainContainer>
+			</BL.ArticleTilesContainer>
+		</BL.MainContainer>
 	);
 };
 
 const BL = {
-	mainContainer: styled.section`
+	MainContainer: styled.section`
 		/* background-color: red; */
 		height: 970px;
 		width: 100%;
@@ -69,19 +69,19 @@ const BL = {
 		grid-template-rows: 30% 70%;
 		grid-template-areas: "header header" "mainArticle articleTiles";
 	`,
-	mainHeader: styled.aside`
+	MainHeader: styled.aside`
 		height: 100%;
 		width: 100%;
 		grid-area: header;
 	`,
-	mainArticle: styled.aside`
+	MainArticle: styled.aside`
 		height: 100%;
 		width: 100%;
 		display: flex;
 
 		grid-area: mainArticle;
 	`,
-	articleTilesContainer: styled.aside`
+	ArticleTilesContainer: styled.aside`
 		height: 100%;
 		width: 100%;
 		padding-left: 5%;

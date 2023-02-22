@@ -25,16 +25,16 @@ const Article = (props: ArticleProps) => {
 	const { titleProp, dateProp, srcImgProp, variant = "default" } = props;
 
 	return (
-		<Ar.mainContainer variant={variant}>
-			<Ar.miniImageContainer variant={variant}>
+		<Ar.MainContainer variant={variant}>
+			<Ar.MiniImageContainer variant={variant}>
 				<Image srcProp={srcImgProp} variant={"articleDef"} />
-			</Ar.miniImageContainer>
-			<Ar.miniTitleDateContainer variant={variant}>
+			</Ar.MiniImageContainer>
+			<Ar.MiniTitleDateContainer variant={variant}>
 				<Paragraph contentProp={dateProp} variant={variant} />
 				<Heading headingTitleProp={titleProp} variant={variant} />
 				<Paragraph contentProp={"Read Full Article"} variant={"articleReadDefault"} />
-			</Ar.miniTitleDateContainer>
-		</Ar.mainContainer>
+			</Ar.MiniTitleDateContainer>
+		</Ar.MainContainer>
 	);
 };
 
@@ -107,13 +107,13 @@ const ArticleVariants: ArticleVariantsType = {
 };
 
 const Ar = {
-	mainContainer: styled.div<ArticleStyledProps>`
+	MainContainer: styled.div<ArticleStyledProps>`
 		${(props) => ArticleVariants.MainContainer[props.variant as keyof ArticleVariantsType]}
 	`,
-	miniImageContainer: styled.div<ArticleStyledProps>`
+	MiniImageContainer: styled.div<ArticleStyledProps>`
 		${(props) => ArticleVariants.MiniImageContainer[props.variant as keyof ArticleVariantsType]}
 	`,
-	miniTitleDateContainer: styled.div<ArticleStyledProps>`
+	MiniTitleDateContainer: styled.div<ArticleStyledProps>`
 		${(props) => ArticleVariants.MiniTitleDateContainer[props.variant as keyof ArticleVariantsType]}
 	`,
 };

@@ -7,8 +7,8 @@ import Paragraph from "../../Components/Paragraph/Paragraph";
 
 const FeatureTwo = () => {
 	return (
-		<FT.mainContainer>
-			<FT.miniLeftContainer>
+		<FT.MainContainer>
+			<FT.MiniLeftContainer>
 				<Heading
 					headingTitleProp={
 						"The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen."
@@ -19,9 +19,9 @@ const FeatureTwo = () => {
 					contentProp={"Request Early Access to Get Started"}
 					variant={"featureTwoOrange"}
 				/>
-			</FT.miniLeftContainer>
-			<FT.miniRightContainer.mainContainer>
-				<FT.miniRightContainer.miniContainer>
+			</FT.MiniLeftContainer>
+			<FT.MiniRightContainer.MainContainer>
+				<FT.MiniRightContainer.MiniContainer>
 					<Line variant={"featureTwo"} />
 					<Heading
 						headingTitleProp={"Improving end distrusts instantly"}
@@ -33,8 +33,8 @@ const FeatureTwo = () => {
 						}
 						variant={"featureTwoLightBlue"}
 					/>
-				</FT.miniRightContainer.miniContainer>
-				<FT.miniRightContainer.miniContainer>
+				</FT.MiniRightContainer.MiniContainer>
+				<FT.MiniRightContainer.MiniContainer>
 					<Line variant={"featureTwo"} />
 					<Heading headingTitleProp={"Become the tended active"} variant={"featureTwoWhite"} />
 					<Paragraph
@@ -43,8 +43,8 @@ const FeatureTwo = () => {
 						}
 						variant={"featureTwoLightBlue"}
 					/>
-				</FT.miniRightContainer.miniContainer>
-				<FT.miniRightContainer.miniContainer>
+				</FT.MiniRightContainer.MiniContainer>
+				<FT.MiniRightContainer.MiniContainer>
 					<Line variant={"featureTwo"} />
 					<Heading headingTitleProp={"Message or am nothing"} variant={"featureTwoWhite"} />
 					<Paragraph
@@ -53,8 +53,8 @@ const FeatureTwo = () => {
 						}
 						variant={"featureTwoLightBlue"}
 					/>
-				</FT.miniRightContainer.miniContainer>
-				<FT.miniRightContainer.miniContainer>
+				</FT.MiniRightContainer.MiniContainer>
+				<FT.MiniRightContainer.MiniContainer>
 					<Line variant={"featureTwo"} />
 					<Heading headingTitleProp={"Really boy law county"} variant={"featureTwoWhite"} />
 					<Paragraph
@@ -63,14 +63,14 @@ const FeatureTwo = () => {
 						}
 						variant={"featureTwoLightBlue"}
 					/>
-				</FT.miniRightContainer.miniContainer>
-			</FT.miniRightContainer.mainContainer>
-		</FT.mainContainer>
+				</FT.MiniRightContainer.MiniContainer>
+			</FT.MiniRightContainer.MainContainer>
+		</FT.MainContainer>
 	);
 };
 
 const FT = {
-	mainContainer: styled.section`
+	MainContainer: styled.section`
 		/* background-color: #00bfff; */
 		height: 640px;
 		width: 100%;
@@ -79,13 +79,13 @@ const FT = {
 
 		padding-top: 200px;
 	`,
-	miniLeftContainer: styled.div`
+	MiniLeftContainer: styled.div`
 		/* background-color: orange; */
 		height: 100%;
 		width: 45%;
 	`,
-	miniRightContainer: {
-		mainContainer: styled.div`
+	MiniRightContainer: {
+		MainContainer: styled.div`
 			/* background-color: red; */
 			height: 100%;
 			width: 55%;
@@ -94,7 +94,7 @@ const FT = {
 			flex-direction: column;
 			justify-content: space-between;
 		`,
-		miniContainer: styled.div`
+		MiniContainer: styled.div`
 			/* background-color: green; */
 			height: 92px;
 			width: 100%;

@@ -20,15 +20,15 @@ const FooterLinks = (props: FooterLinksProps) => {
 	});
 
 	return (
-		<FL.main variant={variant}>
-			<FL.title variant={variant}>{listTitle}</FL.title>
-			<FL.links variant={variant}>{createList}</FL.links>
-		</FL.main>
+		<FL.Main variant={variant}>
+			<FL.Title variant={variant}>{listTitle}</FL.Title>
+			<FL.Links variant={variant}>{createList}</FL.Links>
+		</FL.Main>
 	);
 };
 
 const FL = {
-	main: styled.div<FooterStyledProps>`
+	Main: styled.div<FooterStyledProps>`
 		/* background: grey; */
 		height: fit-content;
 		width: fit-content;
@@ -38,7 +38,7 @@ const FL = {
 		align-items: center;
 		row-gap: 36px;
 	`,
-	title: styled.div<FooterStyledProps>`
+	Title: styled.div<FooterStyledProps>`
 		/* background: blue; */
 		width: 100%;
 		height: 20%;
@@ -46,7 +46,7 @@ const FL = {
 		color: white;
 		font-size: 22px;
 	`,
-	links: styled.div<FooterStyledProps>`
+	Links: styled.div<FooterStyledProps>`
 		/* background: green; */
 		width: 100%;
 		height: 80%;

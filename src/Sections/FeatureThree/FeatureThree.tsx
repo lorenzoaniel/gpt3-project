@@ -9,11 +9,11 @@ import Heading from "../../Components/Heading/Heading";
 
 const FeatureThree = () => {
 	return (
-		<FT.mainContainer>
-			<FT.miniLeftContainer>
+		<FT.MainContainer>
+			<FT.MiniLeftContainer>
 				<Image srcProp={featureImg} />
-			</FT.miniLeftContainer>
-			<FT.miniRightContainer>
+			</FT.MiniLeftContainer>
+			<FT.MiniRightContainer>
 				<Paragraph
 					contentProp={"Request Early Access to Get Started"}
 					variant={"featureThreeLightBlue"}
@@ -32,13 +32,13 @@ const FeatureThree = () => {
 					contentProp={"Request Early Access to Get Started"}
 					variant={"featureThreeOrange"}
 				/>
-			</FT.miniRightContainer>
-		</FT.mainContainer>
+			</FT.MiniRightContainer>
+		</FT.MainContainer>
 	);
 };
 
 const FT = {
-	mainContainer: styled.section`
+	MainContainer: styled.section`
 		/* background-color: black; */
 		height: 750px;
 		width: 100%;
@@ -47,7 +47,7 @@ const FT = {
 
 		padding-top: 100px;
 	`,
-	miniLeftContainer: styled.aside`
+	MiniLeftContainer: styled.aside`
 		/* background-color: orange; */
 		height: 100%;
 		width: 55%;
@@ -56,7 +56,7 @@ const FT = {
 		justify-content: center;
 		align-items: center;
 	`,
-	miniRightContainer: styled.aside`
+	MiniRightContainer: styled.aside`
 		/* background-color: red; */
 		height: 100%;
 		width: 45%;

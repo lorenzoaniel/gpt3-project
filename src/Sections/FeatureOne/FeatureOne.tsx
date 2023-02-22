@@ -7,8 +7,8 @@ import Paragraph from "../../Components/Paragraph/Paragraph";
 
 const FeatureOne = () => {
 	return (
-		<MainContainer.mainContainer>
-			<MainContainer.miniTopContainer>
+		<MainContainer.MainContainer>
+			<MainContainer.MiniTopContainer>
 				<Line variant={"featureOne"} />
 				<Heading headingTitleProp={"What is GPT-3"} variant={"featureOneWhite"} />
 				<Paragraph
@@ -17,16 +17,16 @@ const FeatureOne = () => {
 					}
 					variant={"featureOne"}
 				/>
-			</MainContainer.miniTopContainer>
-			<MainContainer.miniCenterContainer>
+			</MainContainer.MiniTopContainer>
+			<MainContainer.MiniCenterContainer>
 				<Heading
 					headingTitleProp={"The possibilities are beyond your imagination"}
 					variant={"featureOneRainbow"}
 				/>
 				<Paragraph contentProp={"Explore The Library"} variant={"featureOneCenter"} />
-			</MainContainer.miniCenterContainer>
-			<MainContainer.miniBottomContainer.mainContainer>
-				<MainContainer.miniBottomContainer.miniContainer>
+			</MainContainer.MiniCenterContainer>
+			<MainContainer.MiniBottomContainer.MainContainer>
+				<MainContainer.MiniBottomContainer.MiniContainer>
 					<Line variant={"featureOne"} />
 					<Heading headingTitleProp={"Chatbots"} variant={"featureOneWhite"} />
 					<Paragraph
@@ -35,8 +35,8 @@ const FeatureOne = () => {
 						}
 						variant={"featureOne"}
 					/>
-				</MainContainer.miniBottomContainer.miniContainer>
-				<MainContainer.miniBottomContainer.miniContainer>
+				</MainContainer.MiniBottomContainer.MiniContainer>
+				<MainContainer.MiniBottomContainer.MiniContainer>
 					<Line variant={"featureOne"} />
 					<Heading headingTitleProp={"Knowledgebase"} variant={"featureOneWhite"} />
 					<Paragraph
@@ -45,8 +45,8 @@ const FeatureOne = () => {
 						}
 						variant={"featureOne"}
 					/>
-				</MainContainer.miniBottomContainer.miniContainer>
-				<MainContainer.miniBottomContainer.miniContainer>
+				</MainContainer.MiniBottomContainer.MiniContainer>
+				<MainContainer.MiniBottomContainer.MiniContainer>
 					<Line variant={"featureOne"} />
 					<Heading headingTitleProp={"Education"} variant={"featureOneWhite"} />
 					<Paragraph
@@ -55,14 +55,14 @@ const FeatureOne = () => {
 						}
 						variant={"featureOne"}
 					/>
-				</MainContainer.miniBottomContainer.miniContainer>
-			</MainContainer.miniBottomContainer.mainContainer>
-		</MainContainer.mainContainer>
+				</MainContainer.MiniBottomContainer.MiniContainer>
+			</MainContainer.MiniBottomContainer.MainContainer>
+		</MainContainer.MainContainer>
 	);
 };
 
 const MainContainer = {
-	mainContainer: styled.section`
+	MainContainer: styled.section`
 		background-image: radial-gradient(
 				ellipse at top left,
 				rgba(15, 66, 121, 1) 5%,
@@ -85,7 +85,7 @@ const MainContainer = {
 		filter: blur(1px);
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	`,
-	miniTopContainer: styled.div`
+	MiniTopContainer: styled.div`
 		/* background-color: red; */
 		width: 100%;
 		height: 33%;
@@ -95,7 +95,7 @@ const MainContainer = {
 		grid-template-rows: 10% 90%;
 		grid-template-areas: "line ." "heading paragraph";
 	`,
-	miniCenterContainer: styled.div`
+	MiniCenterContainer: styled.div`
 		/* background-color: green; */
 		width: 100%;
 		height: 33%;
@@ -103,15 +103,15 @@ const MainContainer = {
 		display: flex;
 		justify-content: space-between;
 	`,
-	miniBottomContainer: {
-		mainContainer: styled.div`
+	MiniBottomContainer: {
+		MainContainer: styled.div`
 			/* background-color: orange; */
 			width: 100%;
 			height: 33%;
 			display: flex;
 			justify-content: space-between;
 		`,
-		miniContainer: styled.div`
+		MiniContainer: styled.div`
 			/* background-color: red; */
 			height: 100%;
 			width: 30%;
